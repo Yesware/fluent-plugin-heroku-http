@@ -7,15 +7,15 @@ module Fluent
       HTTPS_REGEXP = /^([0-9]+)\s+\<(?<pri>[0-9]+)\>[0-9]* (?<time>[^ ]*) (?<drain_id>[^ ]*) (?<ident>[a-zA-Z0-9_\/\.\-]*) (?<pid>[a-zA-Z0-9\.]+)? *- *(?<message>.*)$/
 
       FACILITY_MAP = Fluent::Plugin::SyslogInput::FACILITY_MAP
-      PRIORITY_MAP = Fluent::Plugin::SyslogInput::PRIORITY_MAP
+      SEVERITY_MAP = Fluent::Plugin::SyslogInput::SEVERITY_MAP
 
       # https://tools.ietf.org/html/rfc5424#section-6.2.1 describes FACILITY
       # as multiplied by 8 (3 bits), so this is used to shift the values to
       # calculate FACILITY from PRIVAL.
       FACILITY_SHIFT = 3
-      # Priority is the remainder after removing FACILITY from PRI, so it is
+      # Severity is the remainder after removing FACILITY from PRI, so it is
       # calculated by bitwise AND to remove the FACILITY value.
-      PRIORITY_MASK = 0b111
+      SEVERITY_MASK = 0b111
 
       Plugin.register_parser('logplex', self)
 
@@ -39,7 +39,7 @@ module Fluent
               record['pri'] = pri
               # Split PRIVAL into Facility and Severity
               record['facility'] = FACILITY_MAP[pri >> FACILITY_SHIFT]
-              record['priority'] = PRIORITY_MAP[pri & PRIORITY_MASK]
+              record['severity'] = SEVERITY_MAP[pri & SEVERITY_MASK]
             end
           end
 

@@ -1,9 +1,5 @@
 # fluent-plugin-heroku-http
 
-[![Build Status](https://travis-ci.org/ApplauseOSS/fluent-plugin-heroku-http.svg?branch=master)](https://travis-ci.org/ApplauseOSS/fluent-plugin-heroku-http)
-[![Gem Version](https://badge.fury.io/rb/fluent-plugin-heroku-http.svg)](https://badge.fury.io/rb/fluent-plugin-heroku-http)
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FApplauseOSS%2Ffluent-plugin-heroku-http.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FApplauseOSS%2Ffluent-plugin-heroku-http?ref=badge_shield)
-
 This is a [fluent](https://fluentd.org) input plugin to accept Heroku HTTPS
 log drains.
 
@@ -69,4 +65,4 @@ $ heroku drains:add https://YOUR-FLUENTD-HOST/DESIRED-FLUENT-TAG
 
 
 ## License
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FApplauseOSS%2Ffluent-plugin-heroku-http.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FApplauseOSS%2Ffluent-plugin-heroku-http?ref=badge_large)
+Apache License 2.0 

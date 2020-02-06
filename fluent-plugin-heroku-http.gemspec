@@ -2,12 +2,12 @@
 
 Gem::Specification.new do |gem|
   gem.name          = 'fluent-plugin-heroku-http'
-  gem.version       = '0.0.1'
-  gem.authors       = ['Platform Delivery']
-  gem.email         = ['ops@applause.com']
+  gem.version       = '1.0.0'
+  gem.authors       = ['Yesware']
+  gem.email         = ['engineering@yesware.com']
   gem.description   = 'fluent plugin to drain heroku http'
   gem.summary       = 'fluent plugin to drain heroku http'
-  gem.homepage      = 'https://github.com/ApplauseOSS/fluent-plugin-heroku-http'
+  gem.homepage      = 'https://github.com/Yesware/fluent-plugin-heroku-http'
   gem.license       = 'APLv2'
 
   gem.files         = `git ls-files`.split($OUTPUT_RECORD_SEPARATOR)

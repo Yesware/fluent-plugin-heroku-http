@@ -64,7 +64,7 @@ class HerokuHttpInputTest < Test::Unit::TestCase
       'pid' => 'web.1',
       'message' => 'foo',
       'facility' => 'user',
-      'priority' => 'notice'
+      'severity' => 'notice'
     }]
 
     assert_equal d.events[1], ['heroku', time_parser.parse('2014-01-30T07:35:00.123456+09:00'), {
@@ -73,7 +73,7 @@ class HerokuHttpInputTest < Test::Unit::TestCase
       'pid' => 'web.1',
       'message' => 'bar',
       'facility' => 'user',
-      'priority' => 'notice'
+      'severity' => 'notice'
     }]
   end
 
@@ -97,7 +97,7 @@ class HerokuHttpInputTest < Test::Unit::TestCase
       'pid' => 'web.1',
       'message' => 'x' * 100,
       'facility' => 'user',
-      'priority' => 'notice'
+      'severity' => 'notice'
     }]
 
     assert_equal d.events[1], ['heroku', time_parser.parse('2014-01-01T01:23:45.123456+00:00'), {
@@ -106,7 +106,7 @@ class HerokuHttpInputTest < Test::Unit::TestCase
       'pid' => 'web.1',
       'message' => 'x' * 1024,
       'facility' => 'user',
-      'priority' => 'notice'
+      'severity' => 'notice'
     }]
   end
 
@@ -130,7 +130,7 @@ class HerokuHttpInputTest < Test::Unit::TestCase
       'pid' => 'web.1',
       'message' => 'x' * 100,
       'facility' => 'user',
-      'priority' => 'notice'
+      'severity' => 'notice'
     }]
 
     assert_equal d.events[1], ['heroku', time_parser.parse('2014-01-01T01:23:45.123456+00:00'), {
@@ -139,7 +139,7 @@ class HerokuHttpInputTest < Test::Unit::TestCase
       'pid' => 'web.1',
       'message' => 'x' * 1024,
       'facility' => 'user',
-      'priority' => 'notice'
+      'severity' => 'notice'
     }]
   end
 
